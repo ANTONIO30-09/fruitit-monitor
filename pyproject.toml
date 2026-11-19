@@ -1,0 +1,40 @@
+[project]
+name = "fruit-bird-detector"
+version = "0.1.0"
+description = "Detección de frutas picoteadas por aves con YOLO/ONNX + FastAPI"
+requires-python = ">=3.10"
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "Antonio Vicente García Corrales" }]
+
+dependencies = [
+    "fastapi>=0.110",
+    "uvicorn[standard]>=0.27",
+    "pydantic>=2.6",
+    "pydantic-settings>=2.1",
+    "sqlalchemy>=2.0",
+    "onnxruntime>=1.17",
+    "opencv-python-headless>=4.9",
+    "numpy>=1.26",
+    "pyyaml>=6.0",
+    "aiofiles>=23.2",
+    "python-multipart>=0.0.9",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0", "pytest-asyncio>=0.23", "httpx>=0.27", "websockets>=12.0"]
+
+[tool.pytest.ini_options]
+minversion = "8.0"
+addopts = "-ra -q"
+testpaths = ["tests"]
+asyncio_mode = "auto"
+filterwarnings = ["ignore::DeprecationWarning"]
+
+[tool.setuptools]
+packages = [
+    "domain", "domain.models", "domain.ports", "domain.services", "domain.value_objects",
+    "application", "application.use_cases", "application.dto",
+    "infra", "infra.inference", "infra.capture", "infra.persistence", "infra.messaging", "infra.config",
+    "api", "api.routes", "api.schemas", "api.dependencies",
+]
