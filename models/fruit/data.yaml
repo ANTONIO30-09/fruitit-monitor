@@ -1,0 +1,13 @@
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 6
+names: ['------------------------------', 'Fruits are annotated in YOLOv8 format.', 'Fruits detection - v1 2023-01-16 4-50pm', 'The dataset includes 8479 images.', 'The following pre-processing was applied to each image-', 'This dataset was created on January 16- 2023 at 11-23 AM GMT']
+
+roboflow:
+  workspace: antonios-workspace-uvhpu
+  project: fruit-detection-ymn4w-fd2vh
+  version: 1
+  license: CC BY 4.0
+  url: https://app.roboflow.com/antonios-workspace-uvhpu/fruit-detection-ymn4w-fd2vh/1
