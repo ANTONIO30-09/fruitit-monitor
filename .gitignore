@@ -32,3 +32,13 @@ logs/*.json
 *.swo
 .DS_Store
 Thumbs.db
+
+# Archivos de respaldo y bases de datos
+*.bak
+*.bak2
+*.db
+*.db.backup
+*.data
+
+# Modelos pesados (Pesos crudos de PyTorch)
+*.pt
